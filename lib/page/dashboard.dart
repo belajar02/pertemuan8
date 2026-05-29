@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../pertemuan/pertemuan8.dart';
 import '../pertemuan/pertemuan9.dart';
+import '../pertemuan/pertemuan10.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -27,16 +28,16 @@ class DashboardPage extends StatelessWidget {
       body: SingleChildScrollView(
 
         child: Padding(
+
           padding: const EdgeInsets.all(20),
 
           child: Column(
 
-            crossAxisAlignment:
-            CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
 
             children: [
 
-              // HEADER DASHBOARD
+              // ================= HEADER =================
 
               Container(
 
@@ -57,8 +58,7 @@ class DashboardPage extends StatelessWidget {
                     end: Alignment.bottomRight,
                   ),
 
-                  borderRadius:
-                  BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(25),
 
                   boxShadow: [
 
@@ -73,8 +73,7 @@ class DashboardPage extends StatelessWidget {
 
                 child: const Column(
 
-                  crossAxisAlignment:
-                  CrossAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
 
                   children: [
 
@@ -86,8 +85,7 @@ class DashboardPage extends StatelessWidget {
 
                           radius: 28,
 
-                          backgroundColor:
-                          Colors.white,
+                          backgroundColor: Colors.white,
 
                           child: Icon(
                             Icons.mobile_friendly,
@@ -112,8 +110,7 @@ class DashboardPage extends StatelessWidget {
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 24,
-                                  fontWeight:
-                                  FontWeight.bold,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
 
@@ -140,8 +137,12 @@ class DashboardPage extends StatelessWidget {
 
               const SizedBox(height: 35),
 
+              // ================= TITLE =================
+
               const Text(
+
                 "Daftar Pertemuan",
+
                 style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
@@ -151,21 +152,19 @@ class DashboardPage extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // PERTEMUAN 8
+              // ================= PERTEMUAN 8 =================
 
               Card(
 
                 elevation: 5,
 
                 shape: RoundedRectangleBorder(
-                  borderRadius:
-                  BorderRadius.circular(18),
+                  borderRadius: BorderRadius.circular(18),
                 ),
 
                 child: ListTile(
 
-                  contentPadding:
-                  const EdgeInsets.all(15),
+                  contentPadding: const EdgeInsets.all(15),
 
                   leading: CircleAvatar(
 
@@ -190,6 +189,7 @@ class DashboardPage extends StatelessWidget {
                   ),
 
                   subtitle: const Padding(
+
                     padding: EdgeInsets.only(top: 5),
 
                     child: Text(
@@ -220,21 +220,19 @@ class DashboardPage extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              // PERTEMUAN 9
+              // ================= PERTEMUAN 9 =================
 
               Card(
 
                 elevation: 5,
 
                 shape: RoundedRectangleBorder(
-                  borderRadius:
-                  BorderRadius.circular(18),
+                  borderRadius: BorderRadius.circular(18),
                 ),
 
                 child: ListTile(
 
-                  contentPadding:
-                  const EdgeInsets.all(15),
+                  contentPadding: const EdgeInsets.all(15),
 
                   leading: CircleAvatar(
 
@@ -259,6 +257,7 @@ class DashboardPage extends StatelessWidget {
                   ),
 
                   subtitle: const Padding(
+
                     padding: EdgeInsets.only(top: 5),
 
                     child: Text(
@@ -287,9 +286,77 @@ class DashboardPage extends StatelessWidget {
                 ),
               ),
 
+              const SizedBox(height: 20),
+
+              // ================= PERTEMUAN 10 =================
+
+              Card(
+
+                elevation: 5,
+
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18),
+                ),
+
+                child: ListTile(
+
+                  contentPadding: const EdgeInsets.all(15),
+
+                  leading: CircleAvatar(
+
+                    radius: 28,
+
+                    backgroundColor:
+                    Colors.deepPurple.shade100,
+
+                    child: const Icon(
+                      Icons.lock,
+                      color: Colors.deepPurple,
+                      size: 30,
+                    ),
+                  ),
+
+                  title: const Text(
+                    "Pertemuan 10",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+
+                  subtitle: const Padding(
+
+                    padding: EdgeInsets.only(top: 5),
+
+                    child: Text(
+                      "Firebase Authentication",
+                    ),
+                  ),
+
+                  trailing: const Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.deepPurple,
+                  ),
+
+                  onTap: () {
+
+                    Navigator.push(
+
+                      context,
+
+                      MaterialPageRoute(
+
+                        builder: (context) =>
+                        const Pertemuan10Page(),
+                      ),
+                    );
+                  },
+                ),
+              ),
+
               const SizedBox(height: 40),
 
-              // FOOTER
+              // ================= FOOTER =================
 
               Center(
 
